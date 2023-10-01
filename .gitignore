@@ -93,6 +93,7 @@ fabric.properties
 .idea/**/sonarlint/
 .idea
 screenshots
+src/main/java/com/demo/qa/data
 
 # SonarQube Plugin
 # https://plugins.jetbrains.com/plugin/7238-sonarqube-community-plugin
