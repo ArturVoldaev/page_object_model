@@ -49,7 +49,7 @@ public class BookStoreTest extends BaseTest {
     }
 
     @Test
-    public void checkTitleBookTest () throws InterruptedException {
+    public void checkTitleBookTest () {
         new BookStorePage(driver).searchBook(Names.BOOK_NAME_JS);
         ArrayList<String> el = (ArrayList<String>) new BookStorePage(driver).getLinksFromWebElement(Names.BOOK_NAME_JS);
         ArrayList <String> bookName = (ArrayList<String>) new BookStorePage(driver).getBookNameWebElement(Names.BOOK_NAME_JS);
@@ -59,6 +59,4 @@ public class BookStoreTest extends BaseTest {
             Assert.assertEquals(new BookStorePage(driver).bookTitle().getText(), bookName.get(i));
         }
     }
-
-
 }
