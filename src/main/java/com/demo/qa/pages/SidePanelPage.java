@@ -1,5 +1,6 @@
 package com.demo.qa.pages;
 
+import com.demo.qa.pages.bookstore.BookStoreLoginPage;
 import com.demo.qa.pages.bookstore.BookStorePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -51,5 +52,13 @@ public class SidePanelPage extends BasePage {
     public BookStorePage selectBookStore() {
         clickOnElementWithJS(bookStore, 0, 1000);
         return new BookStorePage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Login']")
+    WebElement bookStoreLogin;
+
+    public BookStoreLoginPage selectBookStoreLogin() {
+        clickOnElementWithJS(bookStoreLogin, 0, 600);
+        return new BookStoreLoginPage(driver);
     }
 }

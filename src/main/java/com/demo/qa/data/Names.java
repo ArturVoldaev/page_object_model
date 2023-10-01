@@ -11,4 +11,8 @@ public class Names {
     public static final String BOOK_NAME_NO_ROW =  "no rows";
     public static final String USER_NAME =  "Artur";
     public static final String USER_EMAIL =  "nexus@ya.ru";
+
+    public static final String USER_NAME_BOOK_STORE =  "ArturArtur";
+    public static final String PASSWORD_BOOK_STORE =  "ArturArtur123!";
+
 }
