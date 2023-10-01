@@ -1,5 +1,6 @@
 package com.demo.qa.pages;
 
+import com.demo.qa.pages.bookstore.BookStorePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -43,5 +44,12 @@ public class SidePanelPage extends BasePage {
     public BrokenLinksImagesPage selectedBIP() {
         clickOnElementWithJS(brokenLinksImages, 0, 400);
         return new BrokenLinksImagesPage(driver);
+    }
+
+    @FindBy(xpath = "//span[normalize-space()='Book Store']")
+    WebElement bookStore;
+    public BookStorePage selectBookStore() {
+        clickOnElementWithJS(bookStore, 0, 1000);
+        return new BookStorePage(driver);
     }
 }

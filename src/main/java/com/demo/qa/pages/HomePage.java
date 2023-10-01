@@ -10,14 +10,22 @@ public class HomePage extends BasePage {
     }
 
 
-    //@FindBy(xpath = "//span[.='Elements']")
     @FindBy(xpath = "//h5[.='Elements']")
     WebElement elements;
+
+    @FindBy(xpath = "//h5[.='Book Store Application']")
+    WebElement bookStoreApplication;
 
     public HomePage getElements() {
        clickOnElementWithJS(elements, 0, 400);
         return this;
     }
+
+    public HomePage getBookStore() {
+        clickOnElementWithJS(bookStoreApplication, 0, 400);
+        return this;
+    }
+
 
     @FindBy(xpath = "//span[.='Forms']")
     WebElement forms;

@@ -22,10 +22,10 @@ public class BasePage {
        element.sendKeys(text);
     }
 
-    public boolean isElementDisplayed(String cssLocator) {
-        pause(50);
-        return getSizeElementsOnPage(cssLocator) > 0;
-    }
+//    public boolean isElementDisplayed(String cssLocator) {
+//        pause(50);
+//        return getSizeElementsOnPage(cssLocator) > 0;
+//    }
 
     public void pause(int millis) {
         try {
@@ -35,16 +35,16 @@ public class BasePage {
         }
     }
 
-    public boolean isElementNotDisplayed(String cssLocator) {
-        return getSizeElementsOnPage(cssLocator) == 0;
-    }
+//    public boolean isElementNotDisplayed(String cssLocator) {
+//        return getSizeElementsOnPage(cssLocator) == 0;
+//    }
 
-    public boolean countElementsOnPage(String cssSelector, int expectedCount) {
-        return getSizeElementsOnPage(cssSelector) == expectedCount;
-    }
+//    public boolean countElementsOnPage(String cssSelector, int expectedCount) {
+//        return getSizeElementsOnPage(cssSelector) == expectedCount;
+//    }
 
-    public int getSizeElementsOnPage(String cssSelector) {
-        return driver.findElements(By.cssSelector(cssSelector)).size();
+    public int getSizeElementsOnPage(WebElement webElement, By by) {
+        return webElement.findElements(by).size();
     }
 
     public String getTextFromElement(String xpath) {
@@ -87,6 +87,10 @@ public class BasePage {
     public void hideFooter() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.querySelector('footer').style.display='none'");
+    }
+
+    public void goBackPage() {
+        driver.navigate().back();
     }
 
 

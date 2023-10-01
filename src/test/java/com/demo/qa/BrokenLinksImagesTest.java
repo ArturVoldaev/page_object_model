@@ -19,4 +19,9 @@ public class BrokenLinksImagesTest extends BaseTest {
         new BrokenLinksImagesPage(driver).checkAllLinks();
         new BrokenLinksImagesPage(driver).checkBrokenLinks();
     }
+
+    @Test
+    public  void checkedBrokenLinkedTest() {
+        new BrokenLinksImagesPage(driver).checkBrokenImages();
+    }
 }
