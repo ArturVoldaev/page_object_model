@@ -35,11 +35,12 @@ public class HomePage extends BasePage {
         return this;
     }
 
-    @FindBy(xpath = "//div[.='Alerts, Frame & Windows']//span")
+    @FindBy(xpath = "//h5[.='Alerts, Frame & Windows']")
     WebElement AlertsFrameWindows;
 
+
     public HomePage getAlertsFrameWindows() {
-        clickOnElement(elements);
+        clickOnElement(AlertsFrameWindows);
         return this;
     }
 

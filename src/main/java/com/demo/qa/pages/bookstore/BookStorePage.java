@@ -1,13 +1,10 @@
 package com.demo.qa.pages.bookstore;
 
-import com.demo.qa.data.Names;
 import com.demo.qa.pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,15 +78,24 @@ public class BookStorePage extends BasePage {
         return bookTitle;
     }
 
-    public void clickOnElementAssertTitle() {
-        ArrayList <String> el = (ArrayList<String>) getLinksFromWebElement(Names.BOOK_NAME_JS);
-        ArrayList <String> bookName = (ArrayList<String>) getBookNameWebElement(Names.BOOK_NAME_JS);
+//    public void clickOnElementAssertTitle() {
+//        ArrayList <String> el = (ArrayList<String>) getLinksFromWebElement(Names.BOOK_NAME_JS);
+//        ArrayList <String> bookName = (ArrayList<String>) getBookNameWebElement(Names.BOOK_NAME_JS);
+//
+//        for (int i = 0; i < el.size() ; i++) {
+//            driver.switchTo().newWindow(WindowType.TAB);
+//            driver.get(el.get(i));
+//            Assert.assertEquals(bookTitle().getText(), bookName.get(i));
+//        }
+//    }
 
-        for (int i = 0; i < el.size() ; i++) {
-            driver.switchTo().newWindow(WindowType.TAB);
-            driver.get(el.get(i));
-            Assert.assertEquals(bookTitle().getText(), bookName.get(i));
-        }
+    public BookStorePage closeAlert() {
+        pause(1000);
+        driver.switchTo().alert().accept();
+        return this;
     }
+
+    @FindBy(css=".text-right.fullButton")
+    WebElement RENAMEELEMENT;
 
 }

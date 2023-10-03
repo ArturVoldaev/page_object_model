@@ -2,6 +2,7 @@ package com.demo.qa.pages;
 
 import com.google.common.io.Files;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
@@ -89,9 +90,18 @@ public class BasePage {
         js.executeScript("document.querySelector('footer').style.display='none'");
     }
 
-    public void goBackPage() {
-        driver.navigate().back();
-    }
+    @FindBy(id = "closeSmallModal-ok")
+    WebElement okButton;
 
+    @FindBy(id = "closeSmallModal-ok")
+    WebElement deleteBook;
 
+//    public BookStoreProfilePage deleteBook (int number) {
+//        clickOnElement(deleteBook.get(number));
+//        pause(500);
+//        clickOnElement(okButton);
+//        pause(500);
+//        driver.switchTo().alert().accept();
+//        return this;
+//    }
 }

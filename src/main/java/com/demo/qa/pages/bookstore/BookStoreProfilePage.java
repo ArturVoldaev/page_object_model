@@ -26,6 +26,12 @@ public class BookStoreProfilePage extends BasePage {
         clickOnElement(logoutButton);
         return this;
     }
-
-
+//    public BookStoreProfilePage removeAllBooks() {
+//        pause(1000);
+//        int bookCount = deleteBook.size();
+//        for (int i = 0; i < bookCount; i++) {
+//            deleteBook(0);
+//        }
+//        return this;
+//    }
 }

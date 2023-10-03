@@ -2,7 +2,7 @@ package com.demo.qa;
 
 import com.demo.qa.pages.BasePage;
 import com.test.qa.utils.MyListener;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ public class BaseTest {
 
  @BeforeMethod
     public void setUp() {
-     driver= new EventFiringWebDriver(new ChromeDriver());
+     driver= new EventFiringWebDriver(new FirefoxDriver());
 
      driver.get("https://demoqa.com");
      driver.manage().window().maximize();
