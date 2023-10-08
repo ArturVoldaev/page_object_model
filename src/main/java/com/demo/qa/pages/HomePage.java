@@ -45,6 +45,15 @@ public class HomePage extends BasePage {
     }
 
 
+    @FindBy(xpath = "//h5[.='Widgets']")
+    WebElement widgets;
+    public void getWidgets() {
+        clickOnElement(widgets);
+    }
 
-
+    @FindBy(xpath = "//h5[.='Interactions']")
+    WebElement interaction;
+    public void getInteraction() {
+        clickOnElement(interaction);
+    }
 }

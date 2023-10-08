@@ -5,9 +5,12 @@ import com.demo.qa.allerts.FramePage;
 import com.demo.qa.allerts.NestedFramePage;
 import com.demo.qa.pages.bookstore.BookStoreLoginPage;
 import com.demo.qa.pages.bookstore.BookStorePage;
+import com.demo.qa.pages.droppable.DroppablePage;
 import com.demo.qa.pages.elements.BrokenLinksImagesPage;
+import com.demo.qa.pages.elements.ButtonsPage;
 import com.demo.qa.pages.elements.TextBoxPage;
 import com.demo.qa.pages.forms.PracticeFormPage;
+import com.demo.qa.widgets.SelectMenuPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -86,5 +89,28 @@ public class SidePanelPage extends BasePage {
 
         clickOnElementWithJS(nestedFrames, 0, 400);
         return new NestedFramePage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Buttons']")
+    WebElement buttons;
+
+    public ButtonsPage selectButtons() {
+        clickOnElementWithJS(buttons, 0, 200);
+        return new ButtonsPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Select Menu']")
+    WebElement selectMenu;
+    public SelectMenuPage selectSelectMenu() {
+        clickOnElementWithJS(selectMenu, 0, 500);
+        return new SelectMenuPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Droppable']")
+    WebElement droppable;
+
+    public DroppablePage selectDroppable() {
+        clickOnElementWithJS(droppable, 0, 300);
+        return new DroppablePage(driver);
     }
 }
