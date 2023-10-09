@@ -101,14 +101,16 @@ public class SelectMenuPage extends BasePage {
     @FindBy(css = " .css-1uccc91-singleValue")
     WebElement groupSelect;
 
-    public SelectMenuPage selectGroupValue(int indexOfElem) {
+    public SelectMenuPage selectGroupValue() {
         selectWithGroup.click();
-        ArrayList <WebElement> elements = new ArrayList<>(div.findElements(By.tagName("div"))) ;
-        for (int i = 0; i < elements.size(); i++) {
-            if (i == indexOfElem) {
-                elements.get(i).click();
-            }
-        }
+        ArrayList <WebElement> elements = new ArrayList<>(div.findElements(By.tagName("div")));
+
+        driver.findElement(By.xpath("//div[.='Group 2, option 1']")).click();
+//        for (int i = 0; i < elements.size(); i++) {
+//            if (i == indexOfElem) {
+//                elements.get(i).click();
+//            }
+//        }
         return this;
     }
 

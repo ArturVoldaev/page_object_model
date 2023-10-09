@@ -113,4 +113,19 @@ public class SidePanelPage extends BasePage {
         clickOnElementWithJS(droppable, 0, 300);
         return new DroppablePage(driver);
     }
+
+    @FindBy(xpath = "//span[.='Menu']")
+    WebElement menu;
+
+    public MenuPage selectMenu() {
+        clickOnElementWithJS(menu, 0, 500);
+        return new MenuPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Upload and Download']")
+    WebElement uAndD;
+    public UploadAndDownloadPage selectUploadAndDownload() {
+        clickOnElementWithJS(uAndD, 0, 500);
+        return new UploadAndDownloadPage(driver);
+    }
 }

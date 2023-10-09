@@ -56,4 +56,7 @@ public class HomePage extends BasePage {
     public void getInteraction() {
         clickOnElement(interaction);
     }
+
+    public static class UploadTest {
+    }
 }
