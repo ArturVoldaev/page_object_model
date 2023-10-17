@@ -128,4 +128,11 @@ public class SidePanelPage extends BasePage {
         clickOnElementWithJS(uAndD, 0, 500);
         return new UploadAndDownloadPage(driver);
     }
+
+    @FindBy(xpath = "//span[.='Practice Form']")
+    WebElement Forms;
+    public PracticeFormPage selectForms() {
+        clickOnElementWithJS(Forms, 0, 500);
+        return new PracticeFormPage(driver);
+    }
 }

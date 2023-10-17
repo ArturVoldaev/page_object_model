@@ -59,4 +59,10 @@ public class HomePage extends BasePage {
 
     public static class UploadTest {
     }
+
+//    @FindBy(xpath = "//h5[.='Forms']")
+//    WebElement forms;
+//    public void getPageForms() {
+//        clickOnElement(forms);
+//    }
 }

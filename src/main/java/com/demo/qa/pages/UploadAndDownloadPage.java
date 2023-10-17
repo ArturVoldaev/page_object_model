@@ -36,12 +36,10 @@ public class UploadAndDownloadPage extends BasePage{
         pause(5000);
         return this;
 
-
     }
 
     @FindBy(id="uploadedFilePath")
     WebElement uploadedFilePath;
-
     public String getUploader() {
         return uploadedFilePath.getText();
     }
