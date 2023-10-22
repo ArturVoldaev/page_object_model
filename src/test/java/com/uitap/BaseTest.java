@@ -2,7 +2,7 @@ package com.uitap;
 
 
 import com.uitap.utils.MyListener;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ public class BaseTest {
 
  @BeforeMethod
     public void setUp() {
-     driver= new EventFiringWebDriver(new FirefoxDriver());
+     driver= new EventFiringWebDriver(new ChromeDriver());
 
      driver.get("http://uitestingplayground.com/");
      driver.manage().window().maximize();

@@ -65,6 +65,44 @@ public class HomePage extends BasePage {
         return this;
     }
 
+    @FindBy(xpath = "(//a[.='Dynamic Table'])")
+    WebElement dynamicTable;
+
+    public HomePage redirectToDynamicTable() {
+        clickOnElement(dynamicTable);
+        return this;
+    }
+
+    @FindBy(xpath = "(//a[.='Scrollbars'])")
+    WebElement scrollBars;
+
+    public HomePage redirectToScrollbars() {
+        clickOnElement(scrollBars);
+        return this;
+    }
+
+    @FindBy(xpath = "(//a[.='Verify Text'])")
+    WebElement verifyText;
+
+    public HomePage redirectToVerifyText() {
+        clickOnElement(verifyText);
+        return this;
+    }
+
+    @FindBy(xpath = "(//a[.='Progress Bar'])")
+    WebElement progressBar;
+
+    public HomePage redirectToProgressBar() {
+        clickOnElement(progressBar);
+        return this;
+    }
+
+
+
+
+
+
+
 
 
 
