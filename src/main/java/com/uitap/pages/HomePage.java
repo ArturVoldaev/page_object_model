@@ -97,6 +97,65 @@ public class HomePage extends BasePage {
         return this;
     }
 
+    @FindBy(xpath = "(//a[.='Visibility'])")
+    WebElement visibility;
+
+    public HomePage redirectToVisibility() {
+        clickOnElement(visibility);
+        return this;
+    }
+
+    @FindBy(xpath = "(//a[.='Sample App'])")
+    WebElement sampleApp;
+
+    public HomePage redirectToSampleApp() {
+        clickOnElement(sampleApp);
+        return this;
+    }
+
+    @FindBy(xpath = "(//a[.='Mouse Over'])")
+    WebElement mouseOver;
+
+    public HomePage redirectToMouseOver() {
+        clickOnElement(mouseOver);
+        return this;
+    }
+
+    @FindBy(xpath = "(//a[.='Non-Breaking Space'])")
+    WebElement   nonBreakingSpace;
+
+    public HomePage redirectToNonBreakingSpace() {
+        clickOnElement(nonBreakingSpace);
+        return this;
+    }
+
+    @FindBy(xpath = "(//a[.='Overlapped Element'])")
+    WebElement   overlappedElement;
+
+    public HomePage redirectToOverlappedElement() {
+        clickOnElement(overlappedElement);
+        return this;
+    }
+
+    @FindBy(xpath = "(//a[.='Shadow DOM'])")
+    WebElement shadowDOM;
+
+    public HomePage redirectToShadowDOM() {
+        clickOnElement(shadowDOM);
+        return this;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
